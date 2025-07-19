@@ -7,7 +7,7 @@
 
 <p>As someone who was new to Active Directory before this project, I learned that tools like Active Directory allow for central user and device management, resource sharing, and seamless remote acess onto a singular virtual desktop.</p> 
 
-<p>Active Directory is also popular and helpful industry-wise in many organizations due to the fact that the number of end users often outweights the number of resources available.</p>
+<p>Active Directory is also popular and helpful industry-wise in many organizations due to the fact that the number of end users often outweighs the number of resources available.</p>
 
 <h2>Environments and Technologies Used</h2>
   - UTM Virtual Machines
