@@ -5,9 +5,9 @@
 <h1>On-premises Active Directory deployed in UTM</h1>
 <p>In this part of my Active Directory HomeLab, I worked on outlining the steps of implementing an on-premises Active Directory within a macOS Virtual Machine through UTM.</p>
 
-<p>As someone who was new to Active Directory before this project, I learned that tools like Active Directory allow for central user and device management, resource sharing, and seamless remote acess onto a singular virtual desktop.</p> 
+<p>As someone who was new to Active Directory before this project, I learned that tools like Active Directory allow for centralized user and device management, resource sharing, and seamless remote access onto a singular virtual desktop.</p> 
 
-<p>Active Directory is also popular and helpful industry-wise in many organizations due to the fact that the number of end users often outweighs the number of resources available.</p>
+<p>Active Directory is also popular and helpful industry-wise in many organizations due to the fact that the number of end users often outweighs the number of resources available. It is also an important security tool that allows IT administrators to easily manage access and permissions.</p>
 
 <h2>Environments and Technologies Used</h2>
 
@@ -65,4 +65,19 @@
 
 <img src="screenshot1.png">
 
-_This step will load for while once a destination server is selected. Do NOT click the red "X" in the top right corner._
+_This step will load for while once a destination server is selected. Do NOT click the red "X" that shows up in the top right corner._
+
+<img src="screenshot2.png">
+<img src="screenshot3.png">
+
+_Make sure to enable all the same roles and services as I have in the two screenshots above in order for Active Directory to function properly. For any other pages, just hit next all the way through until you get to Results_
+
+<img src="screenshot6.png">
+
+_In the Results page, hit Install. When installation is finished, do NOT close the window. In order to promote our server to domain controller, click on the blue text under Active Directory Domain Services that I've circled in red._
+
+<img src="screenshot7.png">
+<img src="screenshot8.png">
+<img src="screenshot9.png">
+
+_Active Directory Domain Services Configuration Wizard should open up. In Deployment Configuration, toggle the Add a new forest option and input your root domain name (make something up in the format "example.local"). You will also be prompted for a password to your directory services in Domain Controller Options. Afterwards, in Additional Options, make sure to verify your NetBIOS domain name, which would be the part of the root domain before .local_
