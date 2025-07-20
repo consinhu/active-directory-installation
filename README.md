@@ -25,3 +25,6 @@
 - Create Active Directory domain
 - Create organizational units (OUs) for different departments
 - Create user accounts and groups within OUs
+
+**Setting up Windows Server VM**
+
