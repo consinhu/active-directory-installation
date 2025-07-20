@@ -59,8 +59,9 @@
 
 <p>Server Manager will automatically start launching and we can move on to the second and third parts of this activity. If there is a network discovery popup, select the option that makes your server discoverable.</p>
 
-**Promoting Server to Domain Controller and creating an Active Directory domain**
+**Promoting Server to Domain Controller and Creating an Active Directory Domain**
 
-<p>Once Server Manager is finished launching (it is going to take a while because everything is a slower and more laggy on an emulated VM), navigate to the Manage tab and select Add Roles and Features. A wizard will pop up afterwards and we will select server roles and promote the server as a domain controller.</p>
+<p>Once Server Manager is finished launching (it is going to take a while because everything is a slower and more laggy on an emulated VM), navigate to the Manage tab and select Add Roles and Features. A wizard will pop up afterwards and we will select destination server,server roles, and role services as well as promote the server as a domain controller.</p>
 
 <img src="screenshot1.png">
+**_This step will load for while once a destination server is selected. Do NOT click the red "X" in the top right corner._**
