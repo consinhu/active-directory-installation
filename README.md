@@ -65,4 +65,4 @@
 
 <img src="screenshot1.png">
 
-**_This step will load for while once a destination server is selected. Do NOT click the red "X" in the top right corner._**
+_This step will load for while once a destination server is selected. Do NOT click the red "X" in the top right corner._
