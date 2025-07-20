@@ -93,7 +93,7 @@ _Active Directory Domain Services Configuration Wizard should open up. In Deploy
 
 <p>When IT people say OU, they're abbreviating for organizational unit, which you probably already caught on to. OUs are basically container-like structures that carry different types of objects such as users, groups, computers, servers, etc. In a real world setting, OUs can be used to categorize departments based on geography, function, or people.</p>
 
-<img src="https://media.licdn.com/dms/image/v2/D5612AQEGP6tY0_ONlg/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1711164399502?e=1757548800&v=beta&t=UBamXwstgbA2RusKGQrEcib2r_SQy_F3Uf583GzquiE">
+<p align="center"><img width = "477" src="https://media.licdn.com/dms/image/v2/D5612AQEGP6tY0_ONlg/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1711164399502?e=1757548800&v=beta&t=UBamXwstgbA2RusKGQrEcib2r_SQy_F3Uf583GzquiE"></p>
 
 <p>Groups can be slightly more complicated and there are a a few considerations that must be made before creating a group, specifically group scope and group type. Group Scope refers to the extent to which a group's members and permissions can be applied within a domain. There are three main levels which are Universal, Global, and Domain (local).</p>
 
