@@ -2,7 +2,7 @@
 <p align="center">
 <img width="566" src="https://www.31west.net/wp-content/uploads/2022/11/what-is-active-directory-and-why-is-it-used.png.avif" alt="active directory logo" /> </p>
 
-<h1>On-premises Active Directory deployed in UTM</h1>
+<h1>Active Directory Deployed in UTM on a macOS Host</h1>
 <p>In this part of my Active Directory HomeLab, I worked on outlining the steps of implementing an on-premises Active Directory within a macOS Virtual Machine through UTM.</p>
 
 <p>As someone who was new to Active Directory before this project, I learned that tools like Active Directory allow for centralized user and device management, resource sharing, and seamless remote access onto a singular virtual desktop.</p> 
@@ -45,7 +45,7 @@
 
 <p>The setup will prompt for a product key; just click "I don't have a product key". The next screen will ask you to select the type of operating system you want installed. For this page, you'll want to pick something that includes Desktop Experience or else you'll get only the command prompt when you open the server. Click Next.</p>
 
-<p>Now, you might end up with an error screen saying "Windows cannot find the Microsoft software license terms" after hitting Next. This issue typically arises when an installation media is selected durin the initial VM creation stage when it should be added after. It's just confusing because in UTM, users are required to select an ISO prior to booting the VM. But there's a relatively quick and easy fix. First, in the top right corner of the VM window, find the small circle icon and eject the ISO. This will cause the VM to be unable to display anything, but you can add back in the ISO by right clicking on the VM in the list format after it's stopped and going to Edit > IDE drive > Browse. Find the file containing the installation media and select it. Then, repeat the last two steps and you should be able to get back to where we left off.</p>
+<p>Now, you might end up with an error screen saying "Windows cannot find the Microsoft software license terms" after hitting Next. This issue typically arises when an installation media is selected durin the initial VM creation stage when it should be added after. It's just confusing because in UTM, users are required to select an ISO prior to booting the VM, but there's a relatively quick and easy fix. First, in the top right corner of the VM window, find the small circle icon and eject the ISO. This will cause the VM to be unable to display anything, but you can add back in the ISO by right clicking on the VM in the list format after it's stopped and going to Edit > IDE drive > Browse. Find the file containing the installation media and select it. Then, repeat the last two steps before this paragraph and you should be able to get back to where we left off.</p>
 
 <p>This time after selecting the proper OS type, you should be met with a notice and license terms screen. Check the accept box and click Next.</p>
 
@@ -61,11 +61,11 @@
 
 **Promoting Server to Domain Controller and Creating an Active Directory Domain**
 
-<p>Once Server Manager is finished launching (it is going to take a while because everything is a slower and more laggy on an emulated VM), navigate to the Manage tab and select Add Roles and Features. A wizard will pop up afterwards and we will select destination server,server roles, and role services as well as promote the server as a domain controller.</p>
+<p>Once Server Manager is finished launching (it is going to take a while because everything is a slower and more laggy on an emulated VM), navigate to the Manage tab and select Add Roles and Features. A wizard will pop up afterwards and we will select destination server, server roles, and role services as well as promote the server as a domain controller.</p>
 
 <img src="screenshot1.png">
 
-_This step will load for while once a destination server is selected. Do NOT click the red "X" that shows up in the top right corner._
+_This step will load for while once a destination server is selected. Do NOT click the red "X" that shows up in the top right corner. Clicking it will cancel the loading process_
 
 <img src="screenshot2.png">
 <img src="screenshot3.png">
@@ -81,3 +81,22 @@ _In the Results page, hit Install. When installation is finished, do NOT close t
 <img src="screenshot9.png">
 
 _Active Directory Domain Services Configuration Wizard should open up. In Deployment Configuration, toggle the Add a new forest option and input your root domain name (make something up in the format "example.local"). You will also be prompted for a password to your directory services in Domain Controller Options. Afterwards, in Additional Options, make sure to verify your NetBIOS domain name, which would be the part of the root domain before .local_
+
+**OUs, Groups, and Users in Active Directory**
+
+<p>System will restart after finishing the previous steps for installing Active Directory. Once you're back in, you can locate the Active Directory services we installed in the startup menu on Windows Server. Click into Active Directory Users and Computers.</p>
+
+<p>To create OUs or organizational units, groups, and users, I've included some screenshot examples.</p>
+
+<img src="screenshot4.png">
+<img src="screenshot5.png">
+
+<p>When IT people say OU, they're abbreviating for organizational unit, which you probably already caught on to. OUs are basically container-like structures that carry different types of objects such as users, groups, computers, servers, etc. In a real world setting, OUs can be used to categorize departments based on geography, function, or people.</p>
+
+<img src="https://media.licdn.com/dms/image/v2/D5612AQEGP6tY0_ONlg/article-inline_image-shrink_400_744/article-inline_image-shrink_400_744/0/1711164399502?e=1757548800&v=beta&t=UBamXwstgbA2RusKGQrEcib2r_SQy_F3Uf583GzquiE">
+
+<p>Groups can be slightly more complicated and there are a a few considerations that must be made before creating a group, specifically group scope and group type. Group Scope refers to the extent to which a group's members and permissions can be applied within a domain. There are three main levels which are Universal, Global, and Domain (local).</p>
+
+<img src="https://i.sstatic.net/BmAHl.jpg">
+
+<p>There's also Group Type. Security Group Types are used to assign permissions to shared resources while Distribution Group Types are mainly used for email lists and cannot be used to assign permissions.</p>
