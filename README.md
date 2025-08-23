@@ -5,7 +5,7 @@
 <h1>Active Directory Deployed in UTM on a macOS Host</h1>
 <p>In this part of my Active Directory HomeLab, I worked on outlining the steps of implementing an on-premises Active Directory within a macOS Virtual Machine through UTM.</p>
 
-<p>As someone who was new to Active Directory before this project, I learned that tools like Active Directory allow for centralized user and device management, resource sharing, and seamless remote access onto a singular virtual desktop.</p> 
+<p>As someone who was relatively new to Active Directory before this project, I learned that tools like Active Directory allow for centralized user and device management, resource sharing, and seamless remote access onto a singular virtual desktop.</p> 
 
 <p>Active Directory is also popular and helpful industry-wise  due to the fact that the number of end users often outweighs the number of resources available. It is also an important security tool that allows IT administrators to easily manage access and permissions for a given organization.</p>
 
